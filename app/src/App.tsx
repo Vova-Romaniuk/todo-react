@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import TodoPage from "./components/TodoPage";
 function App() {
-	const [count, setCount] = useState(0);
+	useEffect(() => {
+		const storedData = localStorage.getItem("todoData");
+		if (!storedData) {
+			localStorage.setItem("todoData", JSON.stringify([]));
+		}
+	}, []);
 
 	return (
 		<div className='w-screen h-fit flex'>

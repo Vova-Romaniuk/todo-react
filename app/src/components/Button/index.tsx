@@ -11,13 +11,13 @@ export interface ButtonProps {
 function Button({
 	children,
 	className,
-	onClick = () => {},
+	onClick,
 	disabled = false,
 	type = "button",
 }: ButtonProps) {
 	return (
 		<button
-			className={`bg-transparent text-textInput cursor-pointer mx-2 h-8 w-8 disabled:opacity-50 disabled:cursor-not-allowed" ${className}`}
+			className={`bg-transparent text-textInput cursor-pointer mx-2 h-8 w-8 disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
 			disabled={disabled}
 			type={type}
 			onClick={onClick}>
