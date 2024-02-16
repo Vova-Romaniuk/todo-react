@@ -1,0 +1,35 @@
+/* CustomDatePicker.css */
+.custom-datepicker {
+	max-width: 400px;
+	margin: 20px auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+h2 {
+	background: #0c0c0c;
+	text-align: center;
+}
+
+.calendar {
+	width: 100%;
+	border-collapse: collapse;
+	position: relative; /* Додаємо relative positioning для коректного позиціонування трикутника */
+}
+
+/* Стилізація для трикутника */
+
+.triangle {
+	position: absolute;
+	float: left;
+	bottom: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 30px solid #79849b;
+	background: #998666;
+}

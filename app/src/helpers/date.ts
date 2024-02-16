@@ -1,3 +1,5 @@
+import dayjs from "dayjs";
+
 export function generateUniqueId() {
 	const randomString = Math.random().toString(36).substring(2, 10);
 
@@ -5,3 +7,6 @@ export function generateUniqueId() {
 
 	return randomString + timestamp;
 }
+
+export const formatDateTime = (dateString) =>
+	dayjs(dateString).format("D MMMM, YYYY [in] HH:mm");
