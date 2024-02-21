@@ -27,6 +27,7 @@ export default function Dialog({
 	return createPortal(
 		<div
 			onClick={handleClose}
+			id='popup'
 			className='w-screen bg-black/50 z-50 h-screen fixed top-0 left-0 flex'>
 			<div
 				onClick={(e) => e.stopPropagation()}

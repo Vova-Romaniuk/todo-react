@@ -258,8 +258,10 @@ function TodoPage() {
 				</div>
 
 				<div className='h-3/6 w-full flex flex-col overflow-y-auto'>
-					<div className='h-fit flex flex-col gap-10 pt-10'>
-						{filterTasksByType?.map((item) => (
+					<div
+						id='tasks'
+						className='h-fit flex flex-col gap-10 pt-10'>
+						{filterTasksByType?.map((item, index) => (
 							<Task
 								description={item.description}
 								key={item.id}
@@ -269,6 +271,7 @@ function TodoPage() {
 								type={item.type}
 								raceId={item.raceId}
 								setTasks={setTasks}
+								index={index}
 							/>
 						))}
 					</div>

@@ -17,6 +17,7 @@ interface TaskProps {
 	setTasks: (e) => void;
 	type: TaskType;
 	raceId: string;
+	index: number;
 }
 
 function Task({
@@ -27,6 +28,7 @@ function Task({
 	setTasks,
 	type,
 	raceId,
+	index,
 }: TaskProps) {
 	const [editDescription, setEditDescription] = useState<string>(
 		type === "task"
@@ -124,7 +126,9 @@ function Task({
 	};
 
 	return (
-		<div className='w-full rounded-xl h-20 bg-backgroundItem border-[1px] border-textColor flex relative rounded-se-none'>
+		<div
+			id={`task${index}`}
+			className='w-full rounded-xl h-20 bg-backgroundItem border-[1px] border-textColor flex relative rounded-se-none'>
 			{isShowDialog && (
 				<Dialog handleClose={handleCloseDialog}>
 					<div className='w-[600px] h-[250px] flex'>

@@ -101,7 +101,9 @@ function DatePicker({
 	}, [currentMonth]);
 
 	return (
-		<div className='custom-datepicker w-96 absolute top-0 h-fit left-[68px] -translate-y-1/2 !text-textColor bg-backgroundItem'>
+		<div
+			id='datepicker'
+			className='custom-datepicker w-96 absolute top-0 h-fit left-[68px] -translate-y-1/2 !text-textColor bg-backgroundItem '>
 			<div className='-left-[30px] border-r-[30px] border-b-[15px]  border-t-[15px]  absolute top-1/2 -translate-y-1/2 w-0 h-0 border-t-transparent border-b-transparent border-r-backgroundItem'></div>
 			<div className='flex justify-evenly'>
 				<Button

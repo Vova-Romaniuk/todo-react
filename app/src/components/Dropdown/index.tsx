@@ -107,7 +107,9 @@ function Dropdown({ name, year, setRace, raceId }: DropdownProps) {
 					{isLoading ? (
 						<Spinner />
 					) : (
-						<div className='h-fit w-full flex flex-col'>
+						<div
+							id='races-wrapper'
+							className='h-fit w-full flex flex-col'>
 							{races.map((item, index) => (
 								<div
 									key={index}
