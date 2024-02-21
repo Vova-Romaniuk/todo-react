@@ -9,4 +9,5 @@ export interface TaskModel {
 	isDone?: boolean;
 	type: TaskType;
 	deadline: string;
+	raceId: string;
 }
