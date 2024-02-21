@@ -105,6 +105,7 @@ function DatePicker({
 			<div className='-left-[30px] border-r-[30px] border-b-[15px]  border-t-[15px]  absolute top-1/2 -translate-y-1/2 w-0 h-0 border-t-transparent border-b-transparent border-r-backgroundItem'></div>
 			<div className='flex justify-evenly'>
 				<Button
+					id='prev-month'
 					className='!text-textInput text-sm hover:!text-textColor'
 					onClick={() => handleMonthChange(-1)}>
 					{getPreviousMonthName(currentMonth)}
@@ -114,6 +115,7 @@ function DatePicker({
 					{getCurrentYear(currentMonth)}
 				</h3>
 				<Button
+					id='next-month'
 					className='!text-textInput text-sm hover:!text-textColor'
 					onClick={() => handleMonthChange(1)}>
 					{getNextMonthName(currentMonth)}
@@ -195,11 +197,13 @@ function DatePicker({
 				</div>
 				<div className='w-full flex font-medium'>
 					<Button
+						id='cancel-datepicker'
 						className='border-[1px] m-auto mr-1 !text-lg !text-textColor px-4 hover:!bg-textColor duration-200 hover:!text-black w-fit h-12 ml-auto'
 						onClick={handleClose}>
 						Cancel
 					</Button>
 					<Button
+						id='save-datepicker'
 						className='border-[1px] px-4 !bg-textColor duration-200 !text-black hover:!bg-[#867a65] hover:text-white w-fit h-12 mr-0'
 						onClick={handleSave}>
 						Save

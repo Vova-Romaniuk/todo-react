@@ -119,6 +119,7 @@ function TodoPage() {
 							className='w-10/12 h-5/6 m-auto flex flex-col mx-auto'>
 							<Input
 								value={description}
+								id='input-new-task'
 								onChange={handleChange}
 								className='!h-14 focus:border-[1px] focus:border-textColor !border-textColor !border-[1px] !text-textColor'
 							/>
@@ -146,6 +147,7 @@ function TodoPage() {
 										)}
 										<Button
 											onClick={handleToggleOpenDatePicker}
+											id='toggle-datepicker'
 											className='text-3xl !text-textColor border-0 outline-0'>
 											<i className='fa-regular fa-calendar-days'></i>
 										</Button>
@@ -165,6 +167,7 @@ function TodoPage() {
 												value={raceYear}
 												className='!w-32 !h-[46px] !text-textColor rounded-md  !border-textColor !border-[1px]'
 												type='number'
+												id='year-race'
 												min='1950'
 												max='2023'
 											/>
@@ -185,11 +188,13 @@ function TodoPage() {
 
 							<div className='mt-auto flex justify-center gap-10 !text-2xl'>
 								<Button
+									id='close-create-dialog'
 									className='w-fit !h-12 !px-4 !py-2 !border-accentColor duration-200 border-2 hover:bg-accentColor hover:text-black rounded-2xl !text-xl'
 									onClick={handleCloseDialog}>
 									Close
 								</Button>
 								<Button
+									id='add-task'
 									className=' w-fit !h-12 !px-4 !py-1 !bg-accentColor !text-black hover:!bg-[#DD3E1C] duration-200 rounded-2xl !text-xl'
 									type='submit'>
 									Add
@@ -223,6 +228,7 @@ function TodoPage() {
 					<div className='my-auto w-fit flex !text-2xl'>
 						<Button
 							onClick={() => handleChangeTypeTask(TaskType.Task)}
+							id='select-type-task'
 							className={`hover:border-b-2 w-fit border-transparent border-b-2 hover:border-accentColor pb-2 !h-10 ${
 								typeTask === TaskType.Task &&
 								"!border-accentColor !text-textColor"
@@ -233,6 +239,7 @@ function TodoPage() {
 							onClick={() =>
 								handleChangeTypeTask(TaskType.Reminder)
 							}
+							id='select-type-reminder'
 							className={`hover:border-b-2 ml-10 w-fit border-transparent border-b-2 hover:border-accentColor pb-2 !h-10 ${
 								typeTask === TaskType.Reminder &&
 								"!border-accentColor  !text-textColor"
@@ -243,6 +250,7 @@ function TodoPage() {
 					<div className='h-12 w-full m-auto flex'>
 						<Button
 							onClick={handleOpenDialog}
+							id='open-create-dialog'
 							className='!h-12 !w-12 flex !rounded-full mr-0 my-auto ml-auto !bg-accentColor text-3xl !text-black items-center justify-center hover:!bg-[#DD3E1C]'>
 							<span className='mb-1'>+</span>
 						</Button>

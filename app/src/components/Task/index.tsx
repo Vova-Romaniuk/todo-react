@@ -132,6 +132,7 @@ function Task({
 							onSubmit={handleUpdate}
 							className='w-10/12 h-5/6 m-auto flex flex-col mx-auto'>
 							<Input
+								id='input-edit-task'
 								value={editDescription}
 								onChange={handleChange}
 								className='!h-14 focus:border-[1px] focus:border-textColor'
@@ -160,6 +161,7 @@ function Task({
 											/>
 										)}
 										<Button
+											id='toggle-datepicker-edit-dialog'
 											onClick={handleToggleOpenDatePicker}
 											className='text-3xl !text-textColor border-0 outline-0'>
 											<i className='fa-regular fa-calendar-days'></i>
@@ -181,6 +183,7 @@ function Task({
 												value={raceYear}
 												className='!w-32 !h-[46px] !text-textColor rounded-md  !border-textColor !border-[1px]'
 												type='number'
+												id='year-race-edit'
 												min='1950'
 												max='2023'
 											/>
@@ -199,11 +202,13 @@ function Task({
 
 							<div className='mt-auto flex justify-center gap-10 !text-2xl'>
 								<Button
+									id='close-edit-dialog'
 									className='w-fit !h-12 !px-4 !py-2 !border-accentColor duration-200 border-2 hover:bg-accentColor hover:text-black rounded-2xl !text-xl'
 									onClick={handleCloseDialog}>
 									Close
 								</Button>
 								<Button
+									id='update-edit-dialog'
 									className='w-fit !h-12 !px-4 !py-2 !bg-accentColor !text-black hover:!bg-[#DD3E1C] duration-200 rounded-2xl !text-xl'
 									type='submit'>
 									Update

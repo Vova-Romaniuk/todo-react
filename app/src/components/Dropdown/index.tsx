@@ -91,6 +91,7 @@ function Dropdown({ name, year, setRace, raceId }: DropdownProps) {
 		<div className='w-fit relative'>
 			<div
 				onClick={handleToggleDropdown}
+				id='toggle-dropdown'
 				className='flex text-textColor items-center bg-backgroundItem cursor-pointer w-80 text-xl border-[1px] border-textColor px-2 py-2 justify-between rounded-md'>
 				<span className='mr-3 block'>{name}</span>
 				{isActiveDropdown ? (
@@ -100,7 +101,9 @@ function Dropdown({ name, year, setRace, raceId }: DropdownProps) {
 				)}
 			</div>
 			{isActiveDropdown && (
-				<div className='absolute w-full top-14 right-0 flex overflow-y-auto h-72 rounded-md border-[1px] border-textColor'>
+				<div
+					id='items-dropdown'
+					className='absolute w-full top-14 right-0 flex overflow-y-auto h-72 rounded-md border-[1px] border-textColor'>
 					{isLoading ? (
 						<Spinner />
 					) : (
