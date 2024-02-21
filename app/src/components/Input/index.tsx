@@ -7,6 +7,7 @@ export interface InputProps {
 	type?: string;
 	min?: string;
 	max?: string;
+	id?: string;
 }
 
 function Input({
@@ -15,6 +16,7 @@ function Input({
 	readonly = false,
 	className = "",
 	type = "text",
+	id = "",
 	...props
 }: InputProps) {
 	return (
@@ -25,6 +27,7 @@ function Input({
 			className={`w-full h-full rounded-3xl px-5 py-1 border-0 outline-0 bg-backgroundItem text-textInput placeholder:text-textInput ${className}`}
 			placeholder='write your next task'
 			readOnly={readonly}
+			id={id}
 			{...props}
 		/>
 	);
