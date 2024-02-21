@@ -167,7 +167,6 @@ function DatePicker({
 				<div className='flex'>
 					<div className='flex'>
 						<span className='h-full flex items-center'>Hours:</span>
-
 						<input
 							type='number'
 							min='0'
